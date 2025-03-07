@@ -1,0 +1,67 @@
+CRITICAL - 2025-03-06 10:44:06 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: news]
+in APPPATH/Models/NewsModel.php on line 17.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/Config/Factories.php(297): class_exists()
+ 5 SYSTEMPATH/Config/Factories.php(216): CodeIgniter\Config\Factories::locateClass()
+ 6 SYSTEMPATH/Config/Factories.php(159): CodeIgniter\Config\Factories::getDefinedInstance()
+ 7 SYSTEMPATH/Common.php(804): CodeIgniter\Config\Factories::__callStatic()
+ 8 APPPATH/Controllers/News.php(11): model()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\News->index()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2025-03-06 10:47:56 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: YES) in /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/Database/MySQLi/Connection.php:202
+Stack trace:
+#0 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/Database/MySQLi/Connection.php(202): mysqli->real_connect()
+#1 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#6 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/app/Models/NewsModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/app/Controllers/News.php(14): App\Models\NewsModel->getNews()
+#8 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/CodeIgniter.php(933): App\Controllers\News->index()
+#9 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: YES) in /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#5 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/app/Models/NewsModel.php(19): CodeIgniter\BaseModel->findAll()
+#6 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/app/Controllers/News.php(14): App\Models\NewsModel->getNews()
+#7 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/CodeIgniter.php(933): App\Controllers\News->index()
+#8 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#9 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/stud/1/2010754/public_html/7CC005-Codeigniter4Project/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2025-03-06 10:47:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: YES)
+[Method: GET, Route: news]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/NewsModel.php(19): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(14): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
