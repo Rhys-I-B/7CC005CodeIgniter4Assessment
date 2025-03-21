@@ -1,4 +1,9 @@
-import React, { StrictMode } from "react";
+function getText()
+{
+	document.getElementById('root').innerHTML = Date();
+}
+
+/*import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 
@@ -9,4 +14,4 @@ root.render(
   <StrictMode>
     <App />
   </StrictMode>
-);
+);*/
