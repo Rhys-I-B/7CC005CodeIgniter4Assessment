@@ -10,7 +10,8 @@ class React extends BaseController
     public function index()
     {
         return view('templates/header')
-            . view('react/index.js')
+			. view ('react/temp.php')
+            . view('react/reactview.php')
             . view('templates/footer');
     }
 }

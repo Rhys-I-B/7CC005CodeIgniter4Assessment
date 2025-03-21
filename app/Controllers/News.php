@@ -76,4 +76,16 @@ class News extends BaseController
             . view('news/success')
             . view('templates/footer');
     }
+	
+	public function json()
+    {
+        $model = model(NewsModel::class);
+
+        $data = [
+            'news_list' => $model->getNews(),
+        ];
+
+        return view('news/newsjson', $data);
+    }
 }
+?>
