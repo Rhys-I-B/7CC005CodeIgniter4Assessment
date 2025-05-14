@@ -9,6 +9,7 @@ $routes->get('/', 'Home::index');
 
 
 use App\Controllers\News;
+use App\Controllers\Games;
 use App\Controllers\Pages;
 use App\Controllers\React;
 
@@ -20,6 +21,10 @@ $routes->get('news/(:segment)', [News::class, 'show']);
 
 $routes->get('react', [React::class, 'index']);
 
+$routes->get('games', [Games::class, 'index']);
+$routes->get('games/new', [Games::class, 'new']);
+$routes->get('games/json', [Games::class, 'json']);
+$routes->post('games', [Games::class, 'create']);
 
 // MUST BE LAST
 $routes->get('pages', [Pages::class, 'index']);
