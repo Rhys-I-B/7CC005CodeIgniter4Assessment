@@ -39,6 +39,8 @@
 	  <li><a href="<?=base_url()?>about">About</a></li>
 	  <li><a href="<?=base_url()?>news">News</a></li>
 	  <li><a href="<?=base_url()?>news/new">Create News</a></li>
+	  <li><a href="<?=base_url()?>games">Games</a></li>
+	  <li><a href="<?=base_url()?>games/new">Create Games</a></li>
 	  <li><a href="<?=base_url()?>react">React JS Project</a></li>
 	</ul>
 
