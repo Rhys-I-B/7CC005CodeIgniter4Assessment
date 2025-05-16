@@ -39,7 +39,7 @@ class Games extends BaseController
         if (! $this->validateData($data, [
             'title' => 'required|max_length[255]|min_length[1]',
             'theme'  => 'required|max_length[5000]|min_length[1]',
-			#'releaseDate'  => 'required|max_length[15]|min_length[3]',
+			#'releaseDate'  => 'required',
 			'image'  => 'required|max_length[5000]|min_length[0]',
 			'price'  => 'required|max_length[5000]|min_length[2]',
 			'downloads'  => 'required|max_length[5000]|min_length[1]',
@@ -61,7 +61,7 @@ class Games extends BaseController
         $model->save([
 			'title' => $post['title'],
             'theme'  => $post['theme'],
-			#'releaseDate'  => $post['releaseDate'],
+			#'releaseDate'  => $post[date_format('releaseDate',"Y/m/d")],
 			'image'  => $post['image'],
 			'price'  => $post['price'],
 			'downloads'  => $post['downloads'],
@@ -73,7 +73,7 @@ class Games extends BaseController
         ]);
 
         return view('templates/header')
-            . view('games/index')
+            . view('games/success')
             . view('templates/footer');
     }
 	
