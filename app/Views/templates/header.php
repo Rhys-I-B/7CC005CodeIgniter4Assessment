@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>CodeIgniter Tutorial</title>
+    <title>CodeIgniter</title>
 	
 	<style>
 		ul {
@@ -41,7 +41,7 @@
 	  <li><a href="<?=base_url()?>news/new">Create News</a></li>
 	  <li><a href="<?=base_url()?>games">Games</a></li>
 	  <li><a href="<?=base_url()?>games/new">Create Games</a></li>
-	  <li><a href="<?=base_url()?>react">React JS Project</a></li>
+	  <li><a href="https://codesandbox.io/p/sandbox/react-dev-forked-pthc4f?file=%2Fsrc%2FApp.js%3A16%2C32">React JS Project</a></li>
 	</ul>
 
 </body>
